@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cookie - The Sweetest memecoin on SOL</title>
+  <link rel="stylesheet" href="cookie_style_1.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+
+<body>
+  <header>
+    <div class="div_class" id="div_class_1">
+      <h1>Welcome to Cookie</h1>
+      <p>The sweetest Degen project you'll ever come across.</p>
+    </div>
+  </header>
+  <div id="animated-icon">
+    <img src="gingerbread-man.gif" alt="Animated Gingerbread Man">
+  </div>
+  <section>
+    <div class="div_class" id="div_class_2">
+      <h2>About Cookie</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit doloremque suscipit libero ab. Perferendis itaque et similique ducimus odio repudiandae?</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="div_class" id="div_class_3">
+      <h2>Contact address</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, vel!</p>
+      <input id="contact-add" type="text" value="Vuauhs748390sjomcnsghsi88hajpspp" readonly/>
+      <button id="button_1" onclick="copyCA()">
+        <i class="fa-regular fa-copy"></i>
+      </button>
+    </div>
+  </footer>
+
+  <!-- SOCIAL LINKS WITH ICONS -->
+  <div class="div_class" id="div_class4">
+    <a href="https://dexscreener.com" target="_blank" rel="noopener noreferrer">
+      <i class="fa-solid fa-chart-line"></i>
+    </a>
+    <a href="https://t.me/B1acB1rd" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-telegram"></i>
+    </a>
+    <a href="https://x.com/B1acB1rd" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+    <a href="https://wa.me/+2348095581424" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- COPY NOTIFICATION -->
+  <div id="copy-notification">Contact Address copied!</div>
+  
+  <section class="cta">
+    <h2>Join the Sweetest Adventure!</h2>
+    <button class="cta-button">Get Started</button>
+  </section>
+  
+  <script>
+    function copyCA() {
+      const ca = document.querySelector('#contact-add').value;
+      navigator.clipboard.writeText(ca).then(() => {
+        const notification = document.getElementById('copy-notification');
+        notification.classList.add('show');
+        setTimeout(() => {
+          notification.classList.remove('show');
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
